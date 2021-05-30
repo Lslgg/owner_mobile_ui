@@ -1,0 +1,255 @@
+<template>
+  <div class="appointment">
+    <div class="appointment__form">
+      <van-cell-group>
+        <van-field
+          v-model="data.name"
+          label="客户姓名"
+          placeholder="请输入用户名"
+        />
+        <select-car-no />
+      </van-cell-group>
+      <van-cell-group>
+        <van-field
+          v-model="data.province"
+          is-link
+          readonly
+          label="所在地区"
+          placeholder="请选择所在地区"
+          @click="onShowArea"
+        />
+        <van-action-sheet v-model="show.area">
+          <van-area
+            title="请选择地区"
+            :area-list="areaList"
+            @confirm="confirmAddress"
+          />
+        </van-action-sheet>
+        <van-field
+          v-model="data.address"
+          label="门牌号"
+          placeholder="请输入门牌号"
+        />
+      </van-cell-group>
+      <van-cell-group>
+        <van-cell title="车型" />
+        <van-cell
+          title="车型型号"
+          is-link
+          @click="onSelectCarNo"
+          :value="data.carInfo"
+        />
+        <!-- <van-field
+          v-model="data.carInfo"
+          is-link
+          readonly
+          label="车型型号"
+          placeholder="请选择车型型号"
+          @click="onSelectCarNo"
+        /> -->
+      </van-cell-group>
+      <van-cell-group>
+        <van-field
+          v-model="data.remark"
+          rows="2"
+          autosize
+          label="备注"
+          type="textarea"
+          maxlength="100"
+          placeholder="备注最多100字"
+          show-word-limit
+        />
+      </van-cell-group>
+      <van-cell-group>
+        <van-field
+          v-model="data.date"
+          is-link
+          readonly
+          label="时间"
+          @click="onShowDate"
+        />
+      </van-cell-group>
+      <van-cell-group>
+        <van-field
+          v-model="data.phone"
+          label="联系电话"
+          placeholder="请输入联系电话"
+        />
+      </van-cell-group>
+      <div class="appointment_btn">
+        <van-button type="info" @click="onSubmit">提交</van-button>
+      </div>
+    </div>
+    <div class="popwindow">
+      <van-calendar
+        :style="{ 'min-height': '590px' }"
+        v-model="show.date"
+        @select="onSelectDate"
+      >
+        <template #footer>
+          <van-cell-group>
+            <div class="appointment_title">选择时间段</div>
+            <div class="appointment__select_date">
+              <van-tag
+                :class="{ 'van-tag--plain': selectTime.time1 }"
+                type="primary"
+                size="large"
+                @click="onSelectTime(1, '8:00-12:00')"
+                >8:00-12:00</van-tag
+              >
+              <van-tag
+                :class="{ 'van-tag--plain': selectTime.time2 }"
+                type="primary"
+                size="large"
+                @click="onSelectTime(2, '12:00-17:00')"
+                >12:00-17:00</van-tag
+              >
+              <van-tag
+                :class="{ 'van-tag--plain': selectTime.time3 }"
+                type="primary"
+                size="large"
+                @click="onSelectTime(3, '17:00-20:00')"
+                >17:00-20:00</van-tag
+              >
+            </div>
+            <div class="appointment_btn">
+              <van-button type="info" @click="onSubmitDate">提交</van-button>
+            </div>
+          </van-cell-group>
+        </template>
+      </van-calendar>
+    </div>
+    <van-popup
+      v-model="show.carType"
+      position="bottom"
+      :style="{ height: '100%' }"
+    >
+      <select-car-type
+        @onSubmitSelectCar="onSubmitSelectCar"
+        v-if="show.carType"
+      />
+    </van-popup>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+import { Getter } from "vuex-class";
+import { areaList } from "@vant/area-data";
+import { SelectCarNo, SelectCarType } from "@/components";
+import Utility from "@/utils/utility";
+
+@Component({
+  components: { SelectCarNo, SelectCarType },
+})
+export default class Appointment extends Vue {
+  @Getter public currentCarList: any;
+
+  public data = {
+    cardNo: "123123",
+    province: "",
+    date: "",
+    time: "",
+    carInfo: "",
+  };
+  public show = {
+    date: false,
+    area: false,
+    carType: false,
+  };
+  public selectTime = {
+    time1: true,
+    time2: true,
+    time3: true,
+  };
+  public areaList = areaList;
+
+  public onSelectDate(date: Date) {
+    this.data.date = Utility.toDateFormat(date);
+  }
+  public onSelectTime(index: number, time: string) {
+    for (const key in this.selectTime) {
+      this.selectTime[key] = true;
+    }
+    this.selectTime["time" + index] = false;
+    this.data.time = time;
+  }
+  public onSubmitDate() {
+    if (!this.data.time) return;
+    this.show.date = false;
+    if (!this.data.date) this.data.date = Utility.toDateFormat(new Date());
+    this.data.date += " " + this.data.time;
+  }
+
+  public onSubmit() {
+    console.log("onSubmit", this.data);
+    this.$router.push({ name: "selectTheSite" });
+  }
+
+  public onShowArea(event: Event) {
+    event.stopPropagation();
+    this.show.area = true;
+  }
+  public onShowDate(event: Event) {
+    event.stopPropagation();
+    this.show.date = true;
+  }
+  public confirmAddress(address: any) {
+    this.data.province = address.map((p) => p.name)!.join(" ");
+    this.show.area = false;
+  }
+
+  public onSelectCarNo() {
+    this.show.carType = true;
+  }
+
+  public onSubmitSelectCar() {
+    this.show.carType = false;
+    this.data.carInfo = this.currentCarList.join(" ");
+  }
+}
+</script>
+
+<style lang="less" scoped>
+::v-deep {
+  .van-cell__title {
+    flex: none;
+  }
+  .van-cell__value {
+    flex: 1;
+  }
+  .van-cell--clickable {
+    align-items: center;
+  }
+}
+.appointment {
+  background-color: #f9f7fa;
+  .van-cell-group {
+    margin-bottom: 0.1rem;
+  }
+}
+.appointment__branner {
+  height: 1.2rem;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+.appointment_btn {
+  text-align: center;
+  padding: 0.1rem;
+  button {
+    width: 80%;
+  }
+}
+.appointment__select_date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 0.02rem;
+}
+.appointment_title {
+  padding: 12px 0;
+}
+</style>

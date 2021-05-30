@@ -1,0 +1,77 @@
+const path = require('path');
+const resolve = (dir) => path.join(__dirname, dir); // 给public路径添加别名
+const merge = require('webpack-merge');
+const tsImportPluginFactory = require('ts-import-plugin');
+
+module.exports = {
+    // 解决vant打包后样式丢失的问题
+    parallel: false,
+    // base目录，等同于router.js的base字段
+    publicPath: './',
+    // 打包后静态资源目录，注意public文件下目录（别名）配置，index.html的icon路径
+    assetsDir: "static",
+    devServer: {
+        // open: true,
+        // host:"localhost",
+        // port: 8080,
+        // https: false,
+        // proxy: {
+        //   "/api": {
+        //     target: "", //目标主机
+        //     target: "", //目标主机
+        //     // ws: true, //代理的WebSockets
+        //     changeOrigin: true, //需要虚拟主机站点
+        //     pathRewrite: {
+        //       "^/api": ""
+        //     }
+        //   }
+        // }
+    },
+    // 生产环境map文件
+    productionSourceMap: false,
+
+    configureWebpack: config => {
+
+    },
+
+    chainWebpack: config => {
+        config.module
+            .rule('ts')
+            .use('ts-loader')
+            .tap(options => {
+                options = merge(options, {
+                    happyPackMode: true,
+                    transpileOnly: true,
+                    getCustomTransformers: () => ({
+                        before: [
+                            tsImportPluginFactory({
+                                libraryName: 'vant',
+                                libraryDirectory: 'es',
+                                style: false
+                            })
+                        ]
+                    }),
+                    compilerOptions: {
+                        module: 'es2015'
+                    }
+                })
+                return options
+            })
+            // set svg-sprite-loader
+        config.module
+            .rule('svg')
+            .exclude.add(resolve('src/assets/img'))
+            .end()
+        config.module
+            .rule('img')
+            .test(/\.svg$/)
+            .include.add(resolve('src/assets/img'))
+            .end()
+            .use('svg-sprite-loader')
+            .loader('svg-sprite-loader')
+            .options({
+                symbolId: 'icon-[name]'
+            })
+            .end()
+    }
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,maximum-scale=1,initial-scale=1,user-scalable=0"><link rel="icon" href="favicon.ico"><title></title><script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script><script src="https://api.map.baidu.com/api?v=2.0&ak=pG0Cp0QYaHBo9wLl5MrHjqORlcOCeMAn"></script><link href="static/css/chunk-50d86013.5bf81d6d.css" rel="prefetch"><link href="static/css/chunk-c1920692.4d199e59.css" rel="prefetch"><link href="static/js/chunk-50d86013.b7929d43.js" rel="prefetch"><link href="static/js/chunk-c1920692.a532bdd0.js" rel="prefetch"><link href="static/css/app.033f89b3.css" rel="preload" as="style"><link href="static/css/chunk-vendors.3fb38b4b.css" rel="preload" as="style"><link href="static/js/app.2ffd221b.js" rel="preload" as="script"><link href="static/js/chunk-vendors.7bd9996a.js" rel="preload" as="script"><link href="static/css/chunk-vendors.3fb38b4b.css" rel="stylesheet"><link href="static/css/app.033f89b3.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but ycpdshzj doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script>(function (doc, win, imgW) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    console.log(clientWidth);
+                    if (!clientWidth) return;
+                    if (clientWidth > 750) {
+                        docEl.style.fontSize = '150px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / imgW) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window, 375);</script><script src="static/js/chunk-vendors.7bd9996a.js"></script><script src="static/js/app.2ffd221b.js"></script></body></html>

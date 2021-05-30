@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="124px" height="206px" viewBox="0 0 124 206" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>编组 13@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="维修部位" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="选择维修部位-未选择" transform="translate(-172.000000, -449.000000)">
+            <g id="编组-13" transform="translate(173.000000, 450.000000)">
+                <g id="g">
+                    <path d="M23,0.0856722909 C28,-0.913905678 72,7.08271807 77,11.08103 C80.3333333,13.7465712 95.3333333,46.0662589 122,108.040093 L122,203 L0,199.001688 L0,22.0763876 C12,8.08229604 19.6666667,0.752057604 23,0.0856722909 Z" id="路径-10备份" stroke="#555358" stroke-width="2" fill="currentColor"></path>
+                    <path d="M112,110.000698 C90,58.0002327 76,32 70,32 C68.4756098,32 66,31.8769741 66,39.0013336 C66,76.0010024 66,136.000465 66,160.000251 C66,184.000036 70,188 90,188 C110,188 112,183.000045 112,167.000188 C112,156.333617 112,137.333787 112,110.000698 Z" id="路径-11备份" stroke-opacity="0.7" stroke="#FFF5EB"></path>
+                    <rect id="矩形备份-8" stroke-opacity="0.7" stroke="#FFF5EB" x="20" y="151" width="12" height="41" rx="6"></rect>
+                    <circle id="椭圆形备份-3" stroke-opacity="0.7" stroke="#FFF5EB" cx="12" cy="184" r="5"></circle>
+                </g>
+                <text id="G" font-family="PingFangSC-Medium, PingFang SC" font-size="40" font-weight="400" line-spacing="48" fill="#FFFFFF">
+                    <tspan x="15" y="81">G</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

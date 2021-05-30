@@ -1,0 +1,35 @@
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
+import Vant from 'vant';
+
+Vue.use(Vant);
+import 'vant/lib/index.css';
+// 引入utils
+import utils from '@/assets/js/Utils';
+// 引入自定义css样式
+import '@/assets/css/base.css';
+import '@/assets/css/globalStyle.css';
+import VConsole from 'vconsole';
+// import 'lib-flexible';
+
+import '@/assets/img' // icon
+
+Vue.config.productionTip = false;
+
+Vue.prototype.utils = utils;
+
+// 判断是否测试环境
+if (process.env.VUE_APP_MODE === 'dev' || process.env.VUE_APP_MODE === 'test') { 
+    new VConsole();
+}
+
+/* 全局颜色  #1786ff 蓝色   #FE9726 橙色 */
+document.body.style.setProperty('--themeColor', '#FE9726');
+
+new Vue({
+    router,
+    store,
+    render: h => h(App)
+}).$mount('#app')

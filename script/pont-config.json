@@ -1,0 +1,15 @@
+  {
+    "outDir": "../src/api",
+    "origins": [
+      {
+        "originUrl": "http://api.fs.hotgz.com/v2/api-docs"
+      }
+    ],
+    "templatePath": "./pontTemplate",
+    "mocks": {
+      "enable": true,
+      "basePath": "",
+      "port": 8080,
+      "wrapper": "{\"code\": 0, \"data\": {response}, \"msg\": \"\"}"
+    }
+  }

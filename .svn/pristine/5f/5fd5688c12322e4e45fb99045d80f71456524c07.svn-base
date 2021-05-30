@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="416px" viewBox="0 0 40 416" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>编组 12@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="维修部位" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="选择维修部位-未选择" transform="translate(-129.000000, -447.000000)">
+            <g id="编组-12" transform="translate(130.000000, 451.000000)">
+                <g id="o">
+                    <path d="M38,0 L38,409 C15.3333333,387.666667 2.66666667,377 0,377 C0,366 0,90 0,25 C21.3333333,15.6666667 34,7.33333333 38,0 Z" id="路径-15备份" stroke="#555358" stroke-width="2" fill="currentColor"></path>
+                    <line x1="19.5" y1="17" x2="19.5" y2="392" id="路径-16备份" stroke="#FFF5EB"></line>
+                    <line x1="19" y1="40" x2="38" y2="35" id="路径-17备份" stroke="#FFF5EB"></line>
+                </g>
+                <text id="O备份" font-family="PingFangSC-Medium, PingFang SC" font-size="40" font-weight="400" line-spacing="48" fill="#FFFFFF">
+                    <tspan x="4" y="192">O</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

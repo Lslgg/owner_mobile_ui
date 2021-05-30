@@ -1,0 +1,74 @@
+@import './flex.css';
+
+div,
+span,
+a,
+p,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+i,
+input,
+textarea,
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.005rem;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 0.12rem;
+    color: rgba(0, 0, 0, 0.8);
+    /* 全局颜色  #1786ff 蓝色   #FE9726 橙色 */
+    --themeColor: #1786ff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    max-width: 750px;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    pointer-events: auto;
+}
+
+input,
+textarea {
+    outline: none;
+    /* 去除苹果的默认样式 */
+    -webkit-appearance: none;
+}
+
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.table:before {
+    content: "";
+    display: table;
+}
+
+

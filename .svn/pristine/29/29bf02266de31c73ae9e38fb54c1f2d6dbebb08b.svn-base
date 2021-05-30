@@ -1,0 +1,46 @@
+import Vue from 'vue'
+import VueRouter, { RouteConfig } from 'vue-router'
+// import Home from '@/views/Home.vue'
+
+Vue.use(VueRouter)
+
+const routes: Array<RouteConfig> = [
+
+    {
+        path: '/',
+        redirect: '/appointment'
+    },
+    {
+        path: '/appointment',
+        name: 'appointment',
+        component: () => import("@/views/Appointment.vue"),
+        meta: { title: '预约', keepAlive: true }
+    },
+    {
+        path: '/selectTheSite',
+        name: 'selectTheSite',
+        component: () => import("@/views/SelectTheSite.vue"),
+        meta: { title: '维修部位选择', keepAlive: true }
+    },
+    {
+        path: '/upload',
+        name: 'upload',
+        component: () => import("@/views/Upload.vue"),
+        meta: { title: '预约系统', keepAlive: false }
+    }
+]
+
+const router = new VueRouter({
+    routes
+})
+
+// 跳转修改页面标题
+router.beforeEach((to, from, next) => {
+    if (to.meta.title) {
+        document.title = to.meta.title;
+    }
+    document.getElementsByTagName("body")[0].style.overflow = "";
+    next();
+})
+
+export default router

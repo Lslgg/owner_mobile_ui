@@ -1,0 +1,112 @@
+<template>
+  <div class="appointment">
+    <div class="appointment__branner">
+      <img src="@/assets/img/banner.png" />
+    </div>
+    <div class="appointment__form">
+      <van-cell-group>
+        <van-field
+          v-model="value"
+          label="客户姓名"
+          placeholder="请输入用户名"
+        />
+        <van-field v-model="value" label="车牌号" placeholder="请输入车牌号" />
+      </van-cell-group>
+      <van-cell-group>
+        <van-field
+          v-model="fieldValue"
+          is-link
+          readonly
+          label="所在地区"
+          placeholder="请选择所在地区"
+          @click="show = true"
+        />
+        <van-field
+          v-model="fieldValue"
+          is-link
+          readonly
+          label="所在地址"
+          placeholder="请选择所在地区"
+          @click="show = true"
+        />
+        <van-field v-model="value" label="门牌号" placeholder="请输入门牌号" />
+      </van-cell-group>
+      <van-cell-group>
+        <van-cell title="车型" />
+        <van-field
+          v-model="fieldValue"
+          is-link
+          readonly
+          label="车型型号"
+          placeholder="请选择车型型号"
+          @click="show = true"
+        />
+        <van-cell title="服务项目" />
+        <van-cell title="上门机油保养(通用)76911" />
+      </van-cell-group>
+
+      <van-cell-group>
+        <van-field
+          v-model="message"
+          rows="2"
+          autosize
+          label="备注"
+          type="textarea"
+          maxlength="100"
+          placeholder="备注最多100字"
+          show-word-limit
+        />
+      </van-cell-group>
+      <van-cell-group>
+        <van-cell title="时间" :value="date" @click="show = true" />
+        <van-calendar v-model="show" @confirm="onConfirm" />
+      </van-cell-group>
+      <van-cell-group>
+        <van-field
+          v-model="value"
+          label="联系电话"
+          placeholder="请输入联系电话"
+        />
+      </van-cell-group>
+      <div class="appointment_btn">
+        <van-button type="warning">提交</van-button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+@Component
+export default class Appointment extends Vue {
+  public fieldValue = "";
+  public show = false;
+
+  public onConfirm() {
+    this.show = false;
+  }
+}
+</script>
+
+<style lang="less" scoped>
+.appointment {
+  background-color: #f9f7fa;
+  .van-cell-group {
+    margin-bottom: 0.1rem;
+  }
+}
+.appointment__branner {
+  height: 1.2rem;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+.appointment_btn {
+  text-align: center;
+  padding: 0.1rem;
+  button {
+    width: 80%;
+  }
+}
+</style>

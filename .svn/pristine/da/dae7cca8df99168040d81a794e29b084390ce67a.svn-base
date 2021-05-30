@@ -1,0 +1,4 @@
+VUE_APP_MODE = 'dev'
+NODE_ENV = 'development'
+// 测试环境 url请求路径
+VUE_APP_URL = 

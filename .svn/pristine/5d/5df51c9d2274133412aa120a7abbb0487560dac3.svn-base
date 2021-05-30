@@ -1,0 +1,485 @@
+
+.bgcColor {
+    width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+}
+
+.bgcColor-FA {
+    width: 100%;
+    min-height: 100%;
+    background-color: #FAFAFA;
+}
+
+.bgcColor-and-radius {
+    background-color: #fff;
+    border-radius: 0.06rem;
+}
+
+/* ui框架 */
+.van-toast--default {
+    width: 1rem;
+}
+
+.van-toast--loading {
+    width: 1rem !important;
+    padding: 0.12rem !important;
+}
+
+.van-toast__text {
+    font-size: 0.14rem;
+}
+
+/* 字体大小 */
+.fs12 {
+    font-size: 0.12rem;
+}
+.fs13 {
+    font-size: 0.13rem;
+}
+.fs14 {
+    font-size: 0.14rem;
+}
+.fs15 {
+    font-size: 0.15rem;
+}
+.fs16 {
+    font-size: 0.16rem;
+}
+.fs18 {
+    font-size: 0.18rem;
+}
+.fs20 {
+    font-size: 0.20rem;
+}
+
+/* margin */
+.mg5 {
+    margin: 0.05rem;
+}
+.mtb5 {
+    margin: 0.05rem 0;
+}
+.mt5 {
+    margin-top: 0.05rem;
+}
+.ml5 {
+    margin-left: 0.05rem;
+}
+.mr5 {
+    margin-right: 0.05rem;
+}
+.mb5 {
+    margin-bottom: 0.05rem;
+}
+.mt10 {
+    margin-top: 0.1rem;
+}
+.ml10 {
+    margin-left: 0.1rem;
+}
+.mr10 {
+    margin-right: 0.1rem;
+}
+.mb10 {
+    margin-bottom: 0.1rem;
+}
+.mt15 {
+    margin-top: 0.15rem;
+}
+.ml15 {
+    margin-left: 0.15rem;
+}
+.mr15 {
+    margin-right: 0.15rem;
+}
+.mb15 {
+    margin-bottom: 0.15rem;
+}
+.mt20 {
+    margin-top: .20rem;
+}
+
+/* padding */
+.pd15 {
+    padding: 0.15rem;
+}
+.pd10 {
+    padding: 0.10rem;
+}
+.pt5 {
+    padding-top: 0.05rem;
+}
+.pb5 {
+    padding-bottom: 0.05rem;
+}
+.pl5 {
+    padding-left: 0.05rem;
+}
+.pr5 {
+    padding-right: 0.05rem;
+}
+.pl10 {
+    padding-left: 0.10rem;
+}
+.pt15 {
+    padding-top: 0.15rem;
+}
+.pr15 {
+    padding-right: 0.15rem;
+}
+.pl15 {
+    padding-left: 0.15rem;
+}
+.ptb10 {
+    padding: 0.1rem 0;
+}
+.plr10 {
+    padding: 0 0.1rem;
+}
+
+.ptb15 {
+    padding: 0.15rem 0;
+}
+.plr15 {
+    padding: 0 0.15rem;
+}
+.ptb20 {
+    padding: 0.2rem 0;
+}
+.plr20 {
+    padding: 0 0.2rem;
+}
+.ptb10lr15 {
+    padding: 0.1rem 0.15rem;
+}
+.ptbr15 {
+    padding: 0.15rem 0.15rem 0.15rem 0;
+}
+
+/* ------------ 颜色相关 ------------*/
+.fc2 {
+    color: rgba(0, 0, 0, 0.2);
+}
+.fc4 {
+    color: rgba(0, 0, 0, 0.4);
+}
+.fc6 {
+    color: rgba(0, 0, 0, 0.6);
+}
+.fc8 {
+    color: rgba(0, 0, 0, 0.8);
+}
+.c-black {
+    color: #333;
+}
+
+.c-red {
+    color: #F22D2D !important;
+}
+
+.c-orange {
+    color: #FF8D18 !important;
+}
+
+.c-green {
+    color: #00CB20 !important;
+}
+
+.c-666 {
+    color: #666 !important;
+}
+
+.c-999 {
+    color: #999 !important;
+}
+
+.c-blue {
+    color: #397FF7 !important;
+}
+
+.c-ccc {
+    color: #ccc !important;
+}
+
+.c-80 {
+    color: #808080 !important;
+}
+
+.c-bbb {
+    color: #BBBBBB !important;
+}
+
+.c-red-two {
+    color: #FF4665 !important;
+}
+
+.c-yellowGreen {
+    color: #4ACA73 !important;
+}
+
+/* 单行省略 */
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 95%;
+}
+
+.br50 {
+    border-radius: 50%;
+}
+
+/* ------------- vant框架自定义样式 ------------- */
+.selectBox .van-checkbox__label {
+    color: #F22D2D;
+}
+
+/* ------------- input占位符颜色样式 ------------- */
+input::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #ccc;
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #ccc;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #ccc;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #ccc;
+}
+
+textarea::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: rgba(0, 0, 0, 0.4);
+}
+
+textarea:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: rgba(0, 0, 0, 0.4);
+}
+
+textarea::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: rgba(0, 0, 0, 0.4);
+}
+
+textarea::-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/* ------------ 解决安卓1px粗的问题 -----------*/
+.px1-b {
+    position: relative;
+    width: 100%;
+    border: none !important;
+}
+
+.px1-b:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 0%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.px1-b-F7 {
+    position: relative;
+    width: 100%;
+    border: none !important;
+}
+
+.px1-b-F7:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    border-bottom: 1px solid #F7F7F7 !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 0%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.px1-t {
+    position: relative;
+    width: 100%;
+    border: none !important;
+}
+
+.px1-t:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-top: 1px solid #E6E6E6 !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.px1-r {
+    position: relative;
+    width: 100%;
+    border: none !important;
+}
+
+.px1-r:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-right: 1px solid #E6E6E6 !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.px1-a {
+    position: relative;
+    width: 100%;
+    border: none !important;
+}
+
+.px1-a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #E6E6E6 !important;
+    border-radius: 6px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.px1-a-rs8 {
+    position: relative;
+    width: 100%;
+    border: none !important;
+}
+.px1-a-rs8:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #E6E6E6 !important;
+    border-radius: .16rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.px1-a-red {
+    position: relative;
+    width: 100%;
+    border: none !important;
+}
+
+.px1-a-red:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #F22D2D !important;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.px1-a-red-rs200 {
+    position: relative;
+    width: 100%;
+    border: none !important;
+}
+
+.px1-a-red-rs200:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #F22D2D !important;
+    border-radius: 200px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+
+.px1-a-blue-rs200 {
+    position: relative;
+    width: 100%;
+    border: none !important;
+}
+
+.px1-a-blue-rs200:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #397FF7 !important;
+    border-radius: 200px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}

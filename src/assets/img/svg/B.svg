@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="193px" height="192px" viewBox="0 0 193 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>编组 5@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="维修部位" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="选择维修部位-未选择" transform="translate(-278.000000, -259.000000)">
+            <g id="编组-5" transform="translate(279.000000, 261.000000)">
+                <g id="b">
+                    <path d="M95.8120708,2.84217094e-14 L95.812,0.024 L96.3611834,0.0467741616 C131.101931,1.50048541 159.986756,8.83511941 183.015661,22.0506762 C183.015661,72.1658493 191,121.278719 191,185.426141 C191,195.449175 160.060685,181.416927 137.10571,179.41232 C123.230921,177.421745 110.340251,176.41949 95.5020081,176.405557 C80.6603297,176.419445 67.7693916,177.4217 53.8942899,179.41232 C30.9393145,181.416927 0,195.449175 0,185.426141 C0,121.278719 7.98433924,72.1658493 7.98433924,22.0506762 C31.2719953,8.68663001 60.5479059,1.33640462 95.8120708,2.84217094e-14 L95.187,0.024 L95.1879292,2.84217094e-14 L95.1879292,2.84217094e-14 L95.5,0.012 L95.8120708,2.84217094e-14 L95.8120708,2.84217094e-14 Z" id="形状结合" stroke="#555358" stroke-width="2" fill="currentColor"></path>
+                    <line x1="57" y1="5" x2="6" y2="188" id="路径-25备份" stroke-opacity="0.7" stroke="#FFF5EB"></line>
+                    <line x1="186" y1="5" x2="135" y2="188" id="路径-25备份" stroke-opacity="0.7" stroke="#FFF5EB" transform="translate(160.500000, 96.500000) scale(-1, 1) translate(-160.500000, -96.500000) "></line>
+                </g>
+                <text id="B" font-family="PingFangSC-Medium, PingFang SC" font-size="40" font-weight="400" line-spacing="48" fill="#FFFFFF">
+                    <tspan x="82" y="112">B</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

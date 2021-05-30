@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,maximum-scale=1,initial-scale=1,user-scalable=0"><link rel="icon" href="favicon.ico"><title></title><script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script><script src="https://api.map.baidu.com/api?v=2.0&ak=pG0Cp0QYaHBo9wLl5MrHjqORlcOCeMAn"></script><link href="static/css/chunk-2349810b.c567b6ab.css" rel="prefetch"><link href="static/css/chunk-656ab634.b4ad1cb1.css" rel="prefetch"><link href="static/css/chunk-687d7c5c.8c8f445f.css" rel="prefetch"><link href="static/js/chunk-2349810b.2ed486fb.js" rel="prefetch"><link href="static/js/chunk-656ab634.86f2f2bf.js" rel="prefetch"><link href="static/js/chunk-687d7c5c.65aa76f0.js" rel="prefetch"><link href="static/css/app.dfcecf39.css" rel="preload" as="style"><link href="static/css/chunk-vendors.3fb38b4b.css" rel="preload" as="style"><link href="static/js/app.b7cbbc66.js" rel="preload" as="script"><link href="static/js/chunk-vendors.3aa80a09.js" rel="preload" as="script"><link href="static/css/chunk-vendors.3fb38b4b.css" rel="stylesheet"><link href="static/css/app.dfcecf39.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but ycpdshzj doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script>(function (doc, win, imgW) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    console.log(clientWidth);
+                    if (!clientWidth) return;
+                    if (clientWidth > 750) {
+                        docEl.style.fontSize = '150px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / imgW) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window, 375);</script><script src="static/js/chunk-vendors.3aa80a09.js"></script><script src="static/js/app.b7cbbc66.js"></script></body></html>

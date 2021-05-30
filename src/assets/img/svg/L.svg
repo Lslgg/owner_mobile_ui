@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="97px" height="275px" viewBox="0 0 97 275" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>编组 22@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="维修部位" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="选择维修部位-未选择" transform="translate(-206.000000, -866.000000)">
+            <g id="编组-22" transform="translate(207.000000, 867.000000)">
+                <path d="M0,0 L30.1587302,0 L58.3068783,44 C71.0405644,49.3333333 78.7477954,52 81.4285714,52 C85.4497354,52 90.4761905,41 93.4920635,41 C95.5026455,41 95.5026455,58 93.4920635,92 C90.1410935,94.6666667 88.4656085,97 88.4656085,99 C88.4656085,101 85.4497354,158.333333 79.4179894,271 C73.3862434,262.333333 68.3597884,258 64.3386243,258 C58.3068783,258 41.2169312,273 32.1693122,269 C24.1269841,265 18.0952381,211 11.0582011,197 C22.1164021,183 50.2645503,136 50.2645503,94 C50.2645503,52 5.02645503,13 0,10 C0,7.33333333 0,4 0,0 Z" id="路径-19备份" stroke="#555358" stroke-width="2" fill="currentColor"></path>
+                <line x1="19" y1="186" x2="40" y2="269" id="路径-20备份" stroke-opacity="0.7" stroke="#FFF5EB"></line>
+                <text id="L" font-family="PingFangSC-Medium, PingFang SC" font-size="40" font-weight="400" line-spacing="48" fill="#FFFFFF">
+                    <tspan x="46" y="204">L</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,44 @@
+import { apibase, noLoadingApiBase  } from '@/api/apibase';
+// 获取请求api
+const BASE_URL = process.env.VUE_APP_URL;
+
+class Request {
+    static getHttp(url: string, data: any, isloading: boolean): any {
+        let urlData = '';
+        if (data) {
+            for (const key in data) {
+                urlData += `${key}=${data[key]}&`;
+            }
+        }
+        const newUrlData = urlData ? urlData.substr(0, urlData.length - 1) : '';
+        if (isloading) {
+            return apibase({
+                url: `${BASE_URL + url}${newUrlData ? '?' + newUrlData : ''}`,
+                method: 'get'
+            })
+        } else {
+            return noLoadingApiBase({
+                url: `${BASE_URL + url}${newUrlData ? '?' + newUrlData : ''}`,
+                method: 'get'
+            })
+        }
+    }
+
+    static postHttp(url: string, data: any, isloading: boolean): any {
+        if (isloading) {
+            return apibase({
+                url: BASE_URL + url,
+                method: 'post',
+                data: data
+            })
+        } else {
+            return noLoadingApiBase({
+                url: BASE_URL + url,
+                method: 'post',
+                data: data
+            })
+        }
+    }
+}
+
+export default Request;
